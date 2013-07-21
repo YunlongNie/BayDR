@@ -1,0 +1,279 @@
+
+R version 2.15.3 (2013-03-01) -- "Security Blanket"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-apple-darwin9.8.0/x86_64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "BayDR"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('BayDR')
+Loading required package: Rcpp
+Loading required package: RcppArmadillo
+Loading required package: boot
+Loading required package: LaplacesDemon
+Loading required package: parallel
+
+Attaching package: ‘LaplacesDemon’
+
+The following object(s) are masked from ‘package:boot’:
+
+    logit
+
+Loading required package: plyr
+Loading required package: mnormt
+Loading required package: speedglm
+Loading required package: Matrix
+Loading required package: lattice
+
+Attaching package: ‘lattice’
+
+The following object(s) are masked from ‘package:boot’:
+
+    melanoma
+
+
+Attaching package: ‘speedglm’
+
+The following object(s) are masked from ‘package:boot’:
+
+    control
+
+> 
+> assign(".oldSearch", search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("AllEs_C")
+> ### * AllEs_C
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: AllEs_C
+> ### Title: Five estimators
+> ### Aliases: AllEs_C
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D data(sampleDat)
+> ##D Y=sample.dataset$Y
+> ##D X=sample.dataset$X
+> ##D C=sample.dataset$C
+> ##D est=AllEs_C(Y,X,C,addBin=10)
+> ##D est$likelihood # l.old        l.p      l.new
+> ##D 
+> ##D 
+> ##D $est
+> ##D Sold        Snew           P        Bold        Bnew
+> ##D 0.009647389 0.388687875 0.396289809 0.009647389 0.388687875
+> ##D 
+> ##D $likelihood
+> ##D l.old        l.p      l.new
+> ##D -699.9814 -1182.9841  -608.2210
+> ##D 
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("CausalEst")
+> ### * CausalEst
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: CausalEst
+> ### Title: Estimate the true causal effect
+> ### Aliases: CausalEst
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D CausalEst <- function(K=2,r=6,rho=0.3,gamma0=0.2,gamma1=1,gamma2=1,lambda1=1,lambda2=0,CSample)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("GenDat2")
+> ### * GenDat2
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: GenDat2
+> ### Title: Simulating the data
+> ### Aliases: GenDat2
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D  GenDat2 <- function(n=1000,K=2,r=6,rho=0.3,gamma0=0.2,gamma1=0,gamma2=0,
+> ##D lambda1=0,lambda2=0)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("bay.est.new")
+> ### * bay.est.new
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: bay.est.new
+> ### Title: Compute the Snew P and Bnew
+> ### Aliases: bay.est.new
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D data(sampleDat)
+> ##D Y=sample.dataset$Y
+> ##D X=sample.dataset$X
+> ##D C=sample.dataset$C
+> ##D bay.est.new(Y,X,C)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("bay.est.old")
+> ### * bay.est.old
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: bay.est.old
+> ### Title: Compute the Sold P and Bold
+> ### Aliases: bay.est.old
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D  bay.est.old <- function(Y,X,C,k_q=1,prior0,prior1,kappa,beta,Mc.error=0.001)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("dcom")
+> ### * dcom
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: dcom
+> ### Title: Decompose the confounder matrix
+> ### Aliases: dcom
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D data(sampleDat)
+> ##D Y=sample.dataset$Y
+> ##D X=sample.dataset$X
+> ##D C=sample.dataset$C
+> ##D dcom(Y,X,C)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("para.est")
+> ### * para.est
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: para.est
+> ### Title: Compute the P.
+> ### Aliases: para.est
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D para.est <- function(Y,X,C,beta,k_q=1,Mc.error=0.001)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("sample.empty")
+> ### * sample.empty
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: sample.empty
+> ### Title: Sample the empty cells data
+> ### Aliases: sample.empty
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sample.empty<- function(UqC,N)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("sat.est.new")
+> ### * sat.est.new
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: sat.est.new
+> ### Title: Compute the Snew
+> ### Aliases: sat.est.new
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D data(sampleDat)
+> ##D Y=sample.dataset$Y
+> ##D X=sample.dataset$X
+> ##D C=sample.dataset$C
+> ##D  sat.est.new <- function(Y,X,C,k_q,mean=c(0.01,0.99),BinMean = 20,
+> ##D con = c(1,20),BinCon = 20)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("sat.est.old")
+> ### * sat.est.old
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: sat.est.old
+> ### Title: Compute the Sold.
+> ### Aliases: sat.est.old
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D AllEstD_C <- function(Y,X,C,k_q=1,prior0=c(1,1),prior1=c(1,1))
+> ## End(Not run)
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  2.604 0.058 2.674 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

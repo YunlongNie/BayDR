@@ -1,0 +1,11 @@
+AllEs_C                 Five estimators
+BayDR-package           What the package does (short line)
+CausalEst               Estimate the true causal effect
+GenDat2                 Simulating the data
+bay.est.new             Compute the Snew P and Bnew
+bay.est.old             Compute the Sold P and Bold
+dcom                    Decompose the confounder matrix
+para.est                Compute the P.
+sample.empty            Sample the empty cells data
+sat.est.new             Compute the Snew
+sat.est.old             Compute the Sold.

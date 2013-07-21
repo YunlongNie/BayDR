@@ -1,0 +1,17 @@
+readme for import files 
+
+It is not recommended to use require(plyr) in the package 
+
+that's why we use import
+
+
+OK, I checked, and here is what will happen:
+
+1. when you add @import and @importFrom directives, Roxygen will add the lines for them to NAMESPACE, just like it does for @export
+2. you have to edit the DESCRIPTION yourself. Every package that you import from in the NAMESPACE *has* to show up here. But you have two choices how:
+  1. add it to Depends
+  2. add it to Imports
+
+The main difference between Depends and Imports is that whatever is in Depends will also be attached to the search path, while what's in Imports will now. What this means is that the user will be able to use functions from that other package without having to load it himself with "library". (Your package will be able to call into the functions that you import regardless of what you do.) In your case, for 'plyr' I think it fits better in Imports, because it's something you use internally, and the user doesn't have to care about that.
+
+Hope this helps, let me know if you have any questions or run into problems.

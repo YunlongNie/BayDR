@@ -1,0 +1,15 @@
+{
+    "contents" : "require(Rcpp)\n\ncfiles = paste(\"Cpp/\",list.files(\"Cpp/\"),sep=\"\")\nRfiles = paste(\"R/\",list.files(\"R/\"),sep=\"\")\npackageName=\"BayDR\"\nverNo=2.2\nsystem(paste(\"rm -rf\",packageName))\n#  delete the original bayDR folder \nRcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author=\"YL\",\n                      example_code=FALSE,email=\"yunlong.nie@stat.ubc.ca\")\n\n\nrequire(roxygen2)\n\nroxygenise(package.dir=\"BayDR\",overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C\n\n# add useDynLib(BayDR) at the end of NAMESPACE\n\nsystem(paste(\"cp -r data \",paste0(packageName,\"/\")))\nsink(file=paste0(packageName,\"/NAMESPACE\"),append=TRUE)\ncat(\"useDynLib(\",packageName,\")\",sep=\"\")\nsink()\nfile.copy(from=\"DESCRIPTION\",to=paste0(packageName,\"/\"),overwrite=TRUE)\ndesp= readLines(con=paste0(packageName,\"/\",\"DESCRIPTION\"))\ndesp[4] = paste(\"Version: \", verNo)\nwriteLines(desp,con=paste0(packageName,\"/\",\"DESCRIPTION\"))\n# then copy the description file and data folder, change the verion number in the description file. \n\n# command line to the the folder which bayDR locates\n\nsystem(paste(\"R CMD build\",packageName))\nfilenames = list.files(\"~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/\")\nsystem(paste(\"R CMD check\",filenames[grep(as.character(verNo),filenames)]))\nsystem(paste(\"R CMD install\",filenames[grep(as.character(verNo),filenames)]))\n\n\n\n# R CMD build BayDR\n# R CMD check BayDR\n# R CMD INSTALL BayDR\n\n",
+    "created" : 1365714481551.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "503500180",
+    "id" : "6A9268BB",
+    "lastKnownWriteTime" : 1373844356,
+    "path" : "~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/makePackages.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

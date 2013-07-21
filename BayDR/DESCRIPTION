@@ -1,0 +1,25 @@
+Package: BayDR
+Type: Package
+Title: Bayesian model averaging estimate
+Version:  2.2
+Date: 2013-04-11
+Author: YL
+Maintainer: YL <yunlong.nie@stat.ubc.ca>
+Description: Bayesian model averaging estimate
+License: What Licence is it under ?
+Depends:
+    Rcpp (>= 0.10.2), RcppArmadillo,boot, LaplacesDemon, plyr, mnormt, speedglm  
+LinkingTo: Rcpp,RcppArmadillo
+Collate:
+    'AllEst_C.R'
+    'AllEstAddition_C.R'
+    'bay.new.R'
+    'bay.old.R'
+    'CausalEst_C.R'
+    'DatGen_C.R'
+    'para.est.R'
+    'RcppExports.R'
+    'sample.empty.R'
+    'sat.est.new.R'
+    'sat.est.old.R'
+    'UqC.R'

@@ -1,0 +1,155 @@
+* using log directory ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck’
+* using R version 2.15.3 (2013-03-01)
+* using platform: x86_64-apple-darwin9.8.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘BayDR/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘BayDR’ version ‘2.2’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking whether package ‘BayDR’ can be installed ... WARNING
+Found the following significant warnings:
+  Warning: /Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00_pkg_src/BayDR/man/BayDR-package.Rd:30: All text must be in a section
+  Warning: /Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00_pkg_src/BayDR/man/BayDR-package.Rd:31: All text must be in a section
+See ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00install.out’ for details.
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What Licence is it under ?
+Standardizable: FALSE
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* loading checks for arch ‘i386’
+** checking whether the package can be loaded ... OK
+** checking whether the package can be loaded with stated dependencies ... OK
+** checking whether the package can be unloaded cleanly ... OK
+** checking whether the namespace can be loaded with stated dependencies ... OK
+** checking whether the namespace can be unloaded cleanly ... OK
+* loading checks for arch ‘x86_64’
+** checking whether the package can be loaded ... OK
+** checking whether the package can be loaded with stated dependencies ... OK
+** checking whether the package can be unloaded cleanly ... OK
+** checking whether the namespace can be loaded with stated dependencies ... OK
+** checking whether the namespace can be unloaded cleanly ... OK
+* checking for unstated dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... WARNING
+prepare_Rd: BayDR-package.Rd:30: All text must be in a section
+prepare_Rd: BayDR-package.Rd:31: All text must be in a section
+prepare_Rd: BayDR-package.Rd:37-39: Dropping empty section \examples
+* checking Rd metadata ... OK
+* checking Rd cross-references ... WARNING
+Unknown package(s) ‘<pkg>’ in Rd xrefs
+Missing link(s) in documentation object ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00_pkg_src/BayDR/man/bay.est.old.Rd’:
+  ‘Allest_C’
+
+Missing link(s) in documentation object ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00_pkg_src/BayDR/man/sat.est.new.Rd’:
+  ‘Allest_C’
+
+Missing link(s) in documentation object ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00_pkg_src/BayDR/man/sat.est.old.Rd’:
+  ‘Allest_C.R’
+
+See the information in section ‘Cross-references’ of the ‘Writing R
+Extensions’ manual.
+
+* checking for missing documentation entries ... WARNING
+Undocumented data sets:
+  ‘sample.dataset’
+All user-level objects in a package should have documentation entries.
+See the chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'AllEs_C'
+  ‘k_q’ ‘b1’ ‘BinMean’ ‘con’ ‘BinCon’ ‘addBin’ ‘kappa’ ‘Mc.error’
+  ‘Nhead’
+Documented arguments not in \usage in documentation object 'AllEs_C':
+  ‘k_q(1)’ ‘b1(1)’ ‘BinMean(20)’ ‘BinCon(20)’ ‘kappa(0.5)’
+  ‘Mc.error(0.001)’ ‘Nhead(10)’ ‘addBin(10)’
+
+Undocumented arguments in documentation object 'CausalEst'
+  ‘mc.error’
+Documented arguments not in \usage in documentation object 'CausalEst':
+  ‘CSample’
+
+Undocumented arguments in documentation object 'GenDat2'
+  ‘gamma0’ ‘gamma1’ ‘gamma2’ ‘lambda1’ ‘lambda2’
+
+Undocumented arguments in documentation object 'bay.est.new'
+  ‘k_q’ ‘mean’ ‘BinMean’ ‘con’ ‘BinCon’ ‘addBin’ ‘kappa’ ‘Mc.error’
+  ‘liketype’ ‘Dat’
+Documented arguments not in \usage in documentation object 'bay.est.new':
+  ‘k_q(1)’ ‘mean(0.01’ ‘0.99)’ ‘con(1’ ‘20)’ ‘BinMean(20)’ ‘BinCon(20)’
+  ‘kappa(0.5)’ ‘Mc.error(0.001)’ ‘addBin(10)’
+
+Undocumented arguments in documentation object 'bay.est.old'
+  ‘k_q’ ‘prior0’ ‘prior1’ ‘kappa’ ‘Mc.error’ ‘Dat’
+Documented arguments not in \usage in documentation object 'bay.est.old':
+  ‘k_q(1)’ ‘prior0(1)’ ‘prior1(1)’ ‘kappa(0.5)’ ‘Mc.error(0.001)’
+
+Undocumented arguments in documentation object 'para.est'
+  ‘k_q’ ‘Dat’
+
+Undocumented arguments in documentation object 'sample.empty'
+  ‘colnumber’
+
+Undocumented arguments in documentation object 'sat.est.new'
+  ‘k_q’ ‘BinMean’ ‘con’ ‘BinCon’ ‘addBin’ ‘Nhead’ ‘Dat’
+Documented arguments not in \usage in documentation object 'sat.est.new':
+  ‘BinMean(20)’ ‘BinCon(20)’ ‘addBin(10)’ ‘kappa’ ‘beta’
+
+Undocumented arguments in documentation object 'sat.est.old'
+  ‘k_q’ ‘Dat’
+Documented arguments not in \usage in documentation object 'sat.est.old':
+  ‘Mc.error(0.001)’ ‘kappa’ ‘beta’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See the chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... WARNING
+Argument items with no description in Rd object 'CausalEst':
+  ‘gamma0,gamma1,gamma2’ ‘lambda1,lambda2’ ‘CSample’
+
+Argument items with no description in Rd object 'sample.empty':
+  ‘UqC’ ‘N’
+
+Argument items with no description in Rd object 'sat.est.new':
+  ‘addBin(10)’
+
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+                old_size new_size compress
+  sampleDat.rda    419Kb    216Kb    bzip2
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking line endings in Makefiles ... OK
+* checking for portable compilation flags in Makevars ... OK
+* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking compiled code ... OK
+* checking examples ...
+** running examples for arch ‘i386’ ... OK
+** running examples for arch ‘x86_64’ ... OK
+* checking PDF version of manual ... OK
+WARNING: There were 8 warnings.
+See
+  ‘/Users/joha/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/BayDR.Rcheck/00check.log’
+for details.

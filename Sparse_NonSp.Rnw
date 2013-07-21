@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\begin{document}
+<<echo=TRUE,results=verbatim,keep.source=TRUE>>=
+# this code is to investigate the rubostness of saturated 
+#new and old estimates when the data changed from sparse to non-sparse
+# require(BayDR)
+# 
+# dat=GenDat2(phi1=2,K=1) # 6 confounders and 1000 observations  
+# Y = dat$Y
+# X= dat$X
+# C=dat[,1:6]
+# # check if the data is sparse or not
+# UqC=dcom(Dat=dat)$UqC
+# nrow(UqC)==2^6 # TRUE means non-sparse
+# 
+# # 
+# sat.new=sat.est.new(Y,X,C)$est.new
+# sat.old=sat.est.old(Y,X,C)$est.old
+# 
+# #
+# res=do.call(rbind,lapply(1:50,function(i){
+# temp=sample(1:1000,100)
+# dat.sp <- dat[temp,]
+# UqC.sp=dcom(Dat=dat.sp)$UqC
+# if(nrow(UqC.sp)<2^6) # true means sparse here
+# {
+# Y = dat.sp$Y
+# X= dat.sp$X
+# C=dat.sp[,1:6]
+# sat.new.sp=sat.est.new(Y,X,C)$est.new
+# sat.old.sp=sat.est.old(Y,X,C)$est.old
+# }
+# c(new=sat.new.sp,old=sat.old.sp)
+# }))
+#save(res,sat.new,sat.old,file="Sparse-NonSparse.Rdata")
+load("Sparse-NonSparse.Rdata")
+sat.new
+sat.old
+colMeans(res)/c(sat.new,sat.old)
+@
+\end{document}
